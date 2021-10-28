@@ -22,3 +22,7 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+## Cocoapods
+Pods/
+*.xcworkspace
