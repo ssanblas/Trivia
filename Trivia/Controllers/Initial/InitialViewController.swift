@@ -28,6 +28,10 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
                       actions: ["OK"])
         }
     }
+    
+    @IBAction func showInfoTapped(_ sender: Any) {
+        goToInformationController()
+    }
 }
 
 extension InitialViewController {
@@ -50,6 +54,13 @@ extension InitialViewController {
         let vc = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
+    }
+
+    func goToInformationController() {
+        let vc = InformationViewController(nibName: "InformationViewController", bundle: nil)
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .flipHorizontal
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

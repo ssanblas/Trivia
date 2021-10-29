@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationViewController" customModule="Trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Alkemy Trivia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2w-cI-D9h">
+                    <rect key="frame" x="20" y="104" width="374" height="37"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-xQ-rzg">
+                    <rect key="frame" x="20" y="281" width="374" height="561"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLS-lC-uqe">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="730.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnp-Bn-SUJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="730.5"/>
+                                    <mutableString key="text">    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat magna sed placerat dignissim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam sed pulvinar ipsum. Nunc sodales faucibus metus, eget vehicula mauris pellentesque id. Morbi ac justo ac arcu elementum lacinia. Suspendisse in iaculis lectus. Vestibulum vehicula ex a odio tempus, ut laoreet dolor ornare.
+    
+    Morbi rhoncus mauris non volutpat sodales. Nam id sapien libero. Curabitur semper lacus sit amet augue euismod, vitae feugiat nunc fringilla. Etiam et eros dui. Donec sit amet accumsan tortor. Vivamus iaculis magna vestibulum, sodales dolor non, pharetra enim. Pellentesque hendrerit leo non magna accumsan rhoncus. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat magna sed placerat dignissim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam sed pulvinar ipsum. Nunc sodales faucibus metus, eget vehicula mauris pellentesque id. Morbi ac justo ac arcu elementum lacinia. Suspendisse in iaculis lectus. Vestibulum vehicula ex a odio tempus, ut laoreet dolor ornare.
+    
+    Morbi rhoncus mauris non volutpat sodales. Nam id sapien libero. Curabitur semper lacus sit amet augue euismod, vitae feugiat nunc fringilla. Etiam et eros dui. Donec sit amet accumsan tortor. Vivamus iaculis magna vestibulum, sodales dolor non, pharetra enim. Pellentesque hendrerit leo non magna accumsan rhoncus.   </mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Rnp-Bn-SUJ" firstAttribute="leading" secondItem="kLS-lC-uqe" secondAttribute="leading" id="4eJ-VQ-qgo"/>
+                                <constraint firstItem="Rnp-Bn-SUJ" firstAttribute="top" secondItem="kLS-lC-uqe" secondAttribute="top" id="dBP-P7-SY9"/>
+                                <constraint firstAttribute="bottom" secondItem="Rnp-Bn-SUJ" secondAttribute="bottom" id="esF-f1-fBI"/>
+                                <constraint firstAttribute="trailing" secondItem="Rnp-Bn-SUJ" secondAttribute="trailing" id="nWQ-6o-qZb"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="kLS-lC-uqe" firstAttribute="leading" secondItem="gLK-xQ-rzg" secondAttribute="leading" id="0bU-wM-WXx"/>
+                        <constraint firstAttribute="trailing" secondItem="kLS-lC-uqe" secondAttribute="trailing" id="9t3-NG-GhQ"/>
+                        <constraint firstAttribute="bottom" secondItem="kLS-lC-uqe" secondAttribute="bottom" id="OsY-Da-wln"/>
+                        <constraint firstItem="kLS-lC-uqe" firstAttribute="width" relation="lessThanOrEqual" secondItem="gLK-xQ-rzg" secondAttribute="width" id="fte-l9-2RY"/>
+                        <constraint firstItem="kLS-lC-uqe" firstAttribute="top" secondItem="gLK-xQ-rzg" secondAttribute="top" id="tg3-gQ-meB"/>
+                    </constraints>
+                </scrollView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alkemy_img" translatesAutoresizingMaskIntoConstraints="NO" id="Np5-R3-NWF">
+                    <rect key="frame" x="0.0" y="161" width="414" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="4QC-la-Tqx"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-MS-p9U">
+                    <rect key="frame" x="364" y="44" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="afp-2B-xHm"/>
+                        <constraint firstAttribute="height" constant="40" id="cvz-3Y-xP1"/>
+                    </constraints>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="vKL-8S-0Lz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.8071775699" green="0.93487198279999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gLK-xQ-rzg" secondAttribute="trailing" constant="20" id="696-uy-m9f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gLK-xQ-rzg" secondAttribute="bottom" constant="20" id="9li-8b-oIU"/>
+                <constraint firstItem="O2w-cI-D9h" firstAttribute="top" secondItem="Nhp-MS-p9U" secondAttribute="bottom" constant="20" id="BEV-Ts-jP5"/>
+                <constraint firstItem="Np5-R3-NWF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GtQ-yV-bSu"/>
+                <constraint firstItem="Np5-R3-NWF" firstAttribute="top" secondItem="O2w-cI-D9h" secondAttribute="bottom" constant="20" id="LDj-KP-UUn"/>
+                <constraint firstItem="O2w-cI-D9h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RJx-mD-Gq4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nhp-MS-p9U" secondAttribute="trailing" constant="10" id="Vug-au-Pv3"/>
+                <constraint firstItem="gLK-xQ-rzg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b5H-ub-cNY"/>
+                <constraint firstItem="Nhp-MS-p9U" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eV4-4O-avj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O2w-cI-D9h" secondAttribute="trailing" constant="20" id="nHC-sB-o6e"/>
+                <constraint firstItem="gLK-xQ-rzg" firstAttribute="top" secondItem="Np5-R3-NWF" secondAttribute="bottom" constant="20" id="piD-vM-0m4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Np5-R3-NWF" secondAttribute="trailing" id="qXe-Xg-bk9"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alkemy_img" width="2501" height="2501"/>
+    </resources>
+</document>
