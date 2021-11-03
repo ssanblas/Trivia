@@ -11,34 +11,50 @@ class QuestionViewController: UIViewController {
     
     //Outlets
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var rightAnswer: UIButton!
+    @IBOutlet weak var wrongAnswer: UIButton!
     
-    private let questions = Contenido.shared.obtenerPreguntas()
-    private var currentQuestionIndex: Int = 0
+    private var viewModel: QuestionsViewModel!
+    
+    var categoryID: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCurrentQuestion(for: currentQuestionIndex)
+        viewModel = QuestionsViewModel(questionsServices: QuestionsServices())
+        questionLabel.text = viewModel?.questionLabel
+        rightAnswer.isEnabled = false
+        wrongAnswer.isEnabled = false
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getQuestions(for: categoryID) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.setCurrentQuestion()
+            self?.rightAnswer.isEnabled = self!.viewModel.enableButton()
+            self?.wrongAnswer.isEnabled = self!.viewModel.enableButton()
+        }
+    }
+
     //Actions
     @IBAction func wrongAnswerTapped(_ sender: UIButton) {
-        let result = validateCurrentQuestion(answer: false)
+        let result = viewModel.validateCurrentQuestion(answer: false)
+        questionLabel.text = viewModel.getCurrentQuestion()
         sendResultMessage(for: result)
-        updateQuestion()
     }
     
     @IBAction func rightAnswerTapped(_ sender: UIButton) {
-        let result = validateCurrentQuestion(answer: true)
+        let result = viewModel.validateCurrentQuestion(answer: true)
+        questionLabel.text = viewModel.getCurrentQuestion()
         sendResultMessage(for: result)
-        updateQuestion()
     }
     
 }
 
 extension QuestionViewController {
     
-    private func validateCurrentQuestion(answer: Bool) -> Bool {
-        questions[currentQuestionIndex].answer == answer
+    private func setCurrentQuestion() {
+        questionLabel.text = viewModel.getCurrentQuestion()
     }
     
     private func sendResultMessage(for result: Bool) {
@@ -47,20 +63,6 @@ extension QuestionViewController {
         showAlert(title: "Respuesta",
                   message: message,
                   actions: ["OK"])
-    }
-    
-    private func updateQuestion() {
-        currentQuestionIndex += 1
-        setCurrentQuestion(for: currentQuestionIndex)
-    }
-    
-    func setCurrentQuestion(for index: Int) {
-        if index < questions.count {
-            questionLabel.text = questions[index].question
-        } else {
-            currentQuestionIndex = 0
-            questionLabel.text = questions[currentQuestionIndex].question
-        }
     }
 }
 

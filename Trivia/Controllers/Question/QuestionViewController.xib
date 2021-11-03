@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,22 +11,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target">
             <connections>
                 <outlet property="questionLabel" destination="cAr-MD-XnL" id="1x5-WJ-OTe"/>
+                <outlet property="rightAnswer" destination="J9c-ai-DCH" id="8da-74-Om2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wrongAnswer" destination="gYN-st-nym" id="6aS-hs-0MK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RANDOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-zj-OxX">
-                    <rect key="frame" x="124.5" y="64" width="165" height="43"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="J9c-ai-DCH">
-                    <rect key="frame" x="67" y="692" width="120" height="120"/>
+                    <rect key="frame" x="20" y="398" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="28N-23-tag"/>
                         <constraint firstAttribute="height" constant="120" id="QHG-T7-8Tw"/>
@@ -40,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-st-nym">
-                    <rect key="frame" x="227" y="692" width="120" height="120"/>
+                    <rect key="frame" x="180" y="398" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="jki-j5-giv"/>
                         <constraint firstAttribute="width" constant="120" id="lQ8-dU-8Bc"/>
@@ -53,7 +49,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAr-MD-XnL">
-                    <rect key="frame" x="40" y="394.5" width="334" height="107.5"/>
+                    <rect key="frame" x="40" y="144.5" width="240" height="179.5"/>
                     <string key="text">El primer país en organizar un Mundial de
 Fútbol fue Uruguay.</string>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -62,15 +58,13 @@ Fútbol fue Uruguay.</string>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.8071775699" green="0.93487198279999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.8078669906" green="0.93244665859999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J9c-ai-DCH" secondAttribute="bottom" constant="50" id="0s6-dc-7uO"/>
                 <constraint firstItem="cAr-MD-XnL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5Ki-yr-vZj"/>
-                <constraint firstItem="AEn-zj-OxX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8e5-fS-Cd8"/>
                 <constraint firstItem="cAr-MD-XnL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="CAL-vN-JJw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cAr-MD-XnL" secondAttribute="trailing" constant="40" id="D94-2P-hhF"/>
-                <constraint firstItem="cAr-MD-XnL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="EGQ-oa-Qac"/>
-                <constraint firstItem="AEn-zj-OxX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="SFn-wx-02h"/>
+                <constraint firstItem="cAr-MD-XnL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="EGQ-oa-Qac"/>
                 <constraint firstItem="gYN-st-nym" firstAttribute="leading" secondItem="J9c-ai-DCH" secondAttribute="trailing" constant="40" id="Wba-o3-rqP"/>
                 <constraint firstItem="J9c-ai-DCH" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-20" id="gVc-4J-Hdg"/>
                 <constraint firstItem="gYN-st-nym" firstAttribute="centerY" secondItem="J9c-ai-DCH" secondAttribute="centerY" id="ldG-vO-bDK"/>

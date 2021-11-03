@@ -14,7 +14,7 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpLogoView()
+        setupLogoView()
         userTextField.delegate = self
         animateKeyboard()
     }
@@ -36,7 +36,7 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
 
 extension InitialViewController {
     
-    func setUpLogoView() {
+    private func setupLogoView() {
         // Circle effect
         logo.layer.masksToBounds = false
         logo.layer.cornerRadius = logo.frame.height/2
@@ -50,13 +50,13 @@ extension InitialViewController {
         NSLayoutConstraint.activate([centerHorizontal])
     }
     
-    func goToQuestionController() {
-        let vc = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+    private func goToQuestionController() {
+        let tabBarControler = TabBarController()
+        tabBarControler.modalPresentationStyle = .fullScreen
+        self.present(tabBarControler, animated: true)
     }
 
-    func goToInformationController() {
+    private func goToInformationController() {
         let vc = InformationViewController(nibName: "InformationViewController", bundle: nil)
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .flipHorizontal

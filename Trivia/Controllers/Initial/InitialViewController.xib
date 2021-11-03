@@ -35,7 +35,7 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBo-aX-S2K">
                     <rect key="frame" x="40" y="762" width="334" height="50"/>
-                    <color key="backgroundColor" red="0.32069363919999999" green="0.77055638000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.76862745098039209" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="hTF-No-EE8"/>
                     </constraints>
@@ -67,7 +67,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.80717756989441658" green="0.93487198276445549" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.8078669906" green="0.93244665859999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WCM-ip-e9G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1wy-Mz-Clt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WCM-ip-e9G" secondAttribute="trailing" constant="10" id="6Oo-nk-xll"/>

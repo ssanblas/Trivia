@@ -78,7 +78,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat magna se
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.8071775699" green="0.93487198279999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.8078669906" green="0.93244665859999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gLK-xQ-rzg" secondAttribute="trailing" constant="20" id="696-uy-m9f"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gLK-xQ-rzg" secondAttribute="bottom" constant="20" id="9li-8b-oIU"/>
