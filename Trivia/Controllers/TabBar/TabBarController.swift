@@ -21,13 +21,15 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     func setupViewControllers() {
         viewControllers = [
             createNavController(for: QuestionViewController(), title: NSLocalizedString("Random", comment: ""), image: UIImage(systemName: "shuffle")!),
-            createNavController(for: CategoriesViewController(), title: NSLocalizedString("Categories", comment: ""), image: UIImage(systemName: "list.dash")!),
+            createNavController(for: CategoriesViewController(), title: NSLocalizedString("Categories", comment: ""), image: UIImage(systemName: "list.dash")!)
         ]
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        (viewController as? UINavigationController)?.popToRootViewController(animated: true)
-        return true
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if self.selectedIndex == 1 {
+            let rootView = self.viewControllers![self.selectedIndex] as! UINavigationController
+            rootView.popToRootViewController(animated: true)
+        }
     }
 }
 
@@ -35,7 +37,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
 extension TabBarController {
     
-    fileprivate func createNavController(for rootViewController: UIViewController,
+    func createNavController(for rootViewController: UIViewController,
                                                     title: String,
                                                     image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
